@@ -2,4 +2,6 @@
     <string name="app_name">About Me</string>
     <string name="grant_williams">Grant Williams</string>
     <string name="star_image_description">image of a star</string>
+    <string name="bio">My name is Grant Williams \n I am an <b>android</b> developer.
+    </string>
 </resources>

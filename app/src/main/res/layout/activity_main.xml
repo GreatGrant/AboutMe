@@ -22,4 +22,23 @@
         android:contentDescription="@string/star_image_description"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/text_title_style"
+                android:text="@string/bio" />
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>
