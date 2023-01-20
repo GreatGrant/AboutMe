@@ -34,7 +34,7 @@
             style="@style/text_title_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lineSpacingMultiplier="1.2"
+            android:lineSpacingMultiplier="@dimen/line_space"
             android:paddingStart="@dimen/padding"
             android:paddingEnd="@dimen/padding"
             android:text="@string/bio" />
