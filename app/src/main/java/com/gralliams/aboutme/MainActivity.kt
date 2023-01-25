@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun addNickName(it: View?) {
         binding.apply {
             nicknameText.text = nicknameEdit.text
+            invalidateAll()
             nicknameEdit.visibility = View.INVISIBLE
             button.visibility = View.GONE
             nicknameText.visibility = View.VISIBLE
