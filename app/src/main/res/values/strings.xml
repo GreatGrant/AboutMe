@@ -2,19 +2,12 @@
     <string name="app_name">About Me</string>
     <string name="grant_williams">Grant Williams</string>
     <string name="star_image_description">image of a yellow star</string>
-    <string name="bio">My name is Grant Williams \nI am a student and an <b>android developer.</b>\n
-        \nI love reading, coding and writing poems. When I\'m not doing any of this, I spend time either on social media
-        or in the church. \n
-        My name is Grant Williams \nI am a student and an <b>android developer.</b>\n
-        \nI love reading, coding and writing poems. When I\'m not doing any of this, I spend time either on social media
-        or in the church. \n
-        My name is Grant Williams \nI am a student and an <b>android developer.</b>\n
-        \nI love reading, coding and writing poems. When I\'m not doing any of this, I spend time either on social media
-        or in the church. \n
-        My name is Grant Williams \nI am a student and an <b>android developer.</b>\n
-        \nI love reading, coding and writing poems. When I\'m not doing any of this, I spend time either on social media
-        or in the church. \n
+    <string name="bio">My name is %s, but people call me %s. I\'m a student of <b>%s.</b>\n
+        \nI love %s.\n
     </string>
     <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="what_is_your_school">What school did you attend?</string>
+    <string name="what_is_your_hobby">What is your hobby?</string>
     <string name="button_text">Done</string>
 </resources>

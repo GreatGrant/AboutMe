@@ -5,22 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.gralliams.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val myName = MyName("Grant Williams")
+    private val aboutMe = AboutMe()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         // Sets value to binding variable in xml file
-        binding.myName = myName
+        binding.aboutMe = aboutMe
 
         binding.button.setOnClickListener {
             addNickName(it)
@@ -34,11 +31,18 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
 //            nicknameText.text = nicknameEdit.text
 //            Sets value to myName.nickName variable in xml file
-            myName?.nickName = nicknameEdit.text.toString()
+            aboutMe?.nickName = nicknameEdit.text.toString()
+            aboutMe?.myName = nameEdit.text.toString()
+            aboutMe?.school = schoolEdit.text.toString()
+            aboutMe?.hobby = hobbyEdit.text.toString()
+
             invalidateAll()
             nicknameEdit.visibility = View.INVISIBLE
+            nameEdit.visibility = View.INVISIBLE
+            schoolEdit.visibility = View.INVISIBLE
+            hobbyEdit.visibility = View.INVISIBLE
             button.visibility = View.GONE
-            nicknameText.visibility = View.VISIBLE
+            bioScroll.visibility = View.VISIBLE
         }
     }
 }

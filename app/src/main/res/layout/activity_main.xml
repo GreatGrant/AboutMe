@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name = "myName"
-            type = "com.gralliams.aboutme.MyName" />
+            name = "AboutMe"
+            type = "com.gralliams.aboutme.AboutMe" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,12 +19,22 @@
             style="@style/text_title_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={myName.myName}"
+            android:text="@={AboutMe.myName}"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="@string/what_is_your_name"
+            android:ems="10"
+            android:hint="@string/what_is_your_name"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/edit_text_min_height" />
+ <EditText
             android:id="@+id/nickname_edit"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
@@ -32,6 +42,26 @@
             android:autofillHints="@string/what_is_your_nickname"
             android:ems="10"
             android:hint="@string/what_is_your_nickname"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/edit_text_min_height" />
+<EditText
+            android:id="@+id/school_edit"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="@string/what_is_your_nickname"
+            android:ems="10"
+            android:hint="@string/what_is_your_school"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/edit_text_min_height" />
+<EditText
+            android:id="@+id/hobby_edit"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="@string/what_is_your_hobby"
+            android:ems="10"
+            android:hint="@string/what_is_your_hobby"
             android:inputType="textPersonName"
             android:minHeight="@dimen/edit_text_min_height" />
 
@@ -49,7 +79,7 @@
             style="@style/text_title_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={myName.nickName}"
+            android:text="@={AboutMe.nickName}"
             android:textAlignment="center"
             android:textStyle="bold"
             android:visibility="gone"
@@ -65,9 +95,10 @@
             app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <ScrollView
+            android:id="@+id/bio_scroll"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <TextView
                 android:id="@+id/bio_text"
                 style="@style/text_title_style"
@@ -76,9 +107,10 @@
                 android:lineSpacingMultiplier="@dimen/line_space"
                 android:paddingStart="@dimen/padding"
                 android:paddingEnd="@dimen/padding"
-                android:text="@string/bio" />
-        </ScrollView>
+                android:text="@{@string/bio(AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby)}" />
 
+
+        </ScrollView>
 
     </LinearLayout>
 </layout>
