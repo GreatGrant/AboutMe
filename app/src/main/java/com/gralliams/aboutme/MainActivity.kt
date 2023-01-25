@@ -13,9 +13,14 @@ import com.gralliams.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val myName = MyName("Grant Williams")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        // Sets value to binding variable in xml file
+        binding.myName = myName
 
         binding.button.setOnClickListener {
             addNickName(it)
@@ -27,7 +32,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun addNickName(it: View?) {
         binding.apply {
-            nicknameText.text = nicknameEdit.text
+//            nicknameText.text = nicknameEdit.text
+//            Sets value to myName.nickName variable in xml file
+            myName?.nickName = nicknameEdit.text.toString()
             invalidateAll()
             nicknameEdit.visibility = View.INVISIBLE
             button.visibility = View.GONE
