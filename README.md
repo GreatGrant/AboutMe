@@ -10,6 +10,7 @@ A simple Android app that allows you to create and display information about you
 - Use of LinearLayout to organize the UI components.
 - DataBinding is used to bind the data to the UI and update the UI in real-time.
 - ScrollView is used to allow the user to scroll through the information.
+- String Interpolation to allow manipulation of data
 
 ## Getting Started
 
