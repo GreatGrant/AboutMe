@@ -2,8 +2,9 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
-
+        <variable
+            name = "myName"
+            type = "com.gralliams.aboutme.MyName" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
