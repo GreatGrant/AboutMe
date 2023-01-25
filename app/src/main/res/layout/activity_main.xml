@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
-            name = "AboutMe"
-            type = "com.gralliams.aboutme.AboutMe" />
+            name="AboutMe"
+            type="com.gralliams.aboutme.AboutMe" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -34,7 +36,8 @@
             android:hint="@string/what_is_your_name"
             android:inputType="textPersonName"
             android:minHeight="@dimen/edit_text_min_height" />
- <EditText
+
+        <EditText
             android:id="@+id/nickname_edit"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
@@ -44,7 +47,8 @@
             android:hint="@string/what_is_your_nickname"
             android:inputType="textPersonName"
             android:minHeight="@dimen/edit_text_min_height" />
-<EditText
+
+        <EditText
             android:id="@+id/school_edit"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
@@ -54,7 +58,8 @@
             android:hint="@string/what_is_your_school"
             android:inputType="textPersonName"
             android:minHeight="@dimen/edit_text_min_height" />
-<EditText
+
+        <EditText
             android:id="@+id/hobby_edit"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
@@ -96,9 +101,10 @@
 
         <ScrollView
             android:id="@+id/bio_scroll"
-            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
             <TextView
                 android:id="@+id/bio_text"
                 style="@style/text_title_style"
@@ -107,7 +113,7 @@
                 android:lineSpacingMultiplier="@dimen/line_space"
                 android:paddingStart="@dimen/padding"
                 android:paddingEnd="@dimen/padding"
-                android:text="@{@string/bio(AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby)}" />
+                android:text="@{@string/bio(AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby, AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby, AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby, AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby, AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby, AboutMe.myName, AboutMe.nickName, AboutMe.school, AboutMe.hobby)}" />
 
 
         </ScrollView>
